@@ -47,7 +47,7 @@
         </div>
 
 
-        <div class="w-64 bg-gray-100 p-4 flex flex-col space-y-4">
+        <div class="w-64 flex-none bg-gray-100 p-4 flex flex-col space-y-4">
             <div class="flex flex-row items-center justify-between mb-6">
                 <h1 class="font-semibold text-2xl">Inbox</h1>
                 <svg xmlns="http://www.w3.org/2000/svg" class=" flex-none h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -61,10 +61,46 @@
         </div>
 
 
-        <div class=" flex flex-auto bg-white rounded-tl-xl border-l shadow-xl ">
-            <div class="w-1/5 bg-gray-800"> left</div>
-            <div class="w-3/5 border-l border-r border-gray-400"> center</div>
-            <div class="w-1/5 bg-yellow-300"> right</div>
+        <div class=" flex flex-row flex-auto bg-white rounded-tl-xl border-l shadow-xl ">
+            <div class=" flex flex-col w-1/5">
+                <div class=" flex-none h-24 bg-red-200">
+                    top
+                </div>
+                <div class=" flex-auto overflow-y-auto">
+                    {{#each friends}}
+                    <a class=" block border-b">
+                        <div class=" border-l-2 border-blue-400 p-2">
+                            <div class="flex flex-row justify-center items-center space-x-1 bg-red-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                <strong class=" flex-grow "> Jonson L Abrar</strong>
+                                <span>B</span>
+                            </div>
+
+                            <div class="flex flex-row items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-2 w-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                <div class="flex-grow text-xs">
+                                    Have a message here
+
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    {{/each}}
+                </div>
+
+            </div>
+
+            <div class="w-3/5 border-l border-r border-gray-400"> center
+
+            </div>
+
+            <div class="w-1/5 bg-gray-200">
+
+            </div>
         </div>
 
     </div>
